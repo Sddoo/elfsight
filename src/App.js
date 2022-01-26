@@ -30,7 +30,7 @@ const App = React.memo(() => {
 	
 	useEffect(() => {
 		
-		async function fetchData () { // добавить нормальную обработку ошибок
+		async function fetchData () {
 			const characters = await request();
 			
 			dispatch({type: actionList.setResults, payload: characters});

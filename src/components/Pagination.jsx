@@ -40,7 +40,7 @@ const Pagination = React.memo(() => {
 	const changePage = async (nbr) => {
 		if (nbr < 1) nbr = info.pages;
 		else if (nbr > info.pages) nbr = 1;
-		const characters = await getCharacters({...filters, page: nbr}); // добавить useFetch
+		const characters = await getCharacters({...filters, page: nbr});
 		
 		setCurPage(nbr);
 		dispatch({type: actionList.setResults, payload: characters.data});

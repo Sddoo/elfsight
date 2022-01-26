@@ -17,7 +17,7 @@ function reducer(state = defaultState, action) {
 		case actionList.setFilters: {
 			return {...state, filters: action.payload}
 		}
-		case actionList.setResults: { // добавить нормальную обработку ошибок
+		case actionList.setResults: {
 			if (!action.payload) {
 				action.payload = {
 					results: [],
